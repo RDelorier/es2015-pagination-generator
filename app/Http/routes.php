@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', function (Illuminate\Http\Request $request) {
+    return App\User::paginate();
+});
